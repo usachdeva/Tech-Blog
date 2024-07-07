@@ -11,10 +11,11 @@
         {{#each blogs as |blog|}}
             <div class="row mb-2">
                 <div class="col-md-8">
-                    <h2><a href="/blog/{{blog.id}}">{{blog.name}}</a></h2>
-                    <h4>{{blog.description}}</h4>
+                    <h2><a href="/blog/{{blog.id}}">{{blog.title}}
+                            <br />
+                            {{blog.user_id}}</a></h2>
+                    <h4>{{blog.content}}</h4>
                 </div>
-
             </div>
         {{/each}}
     </div>
@@ -25,3 +26,5 @@
         Enter New Blog
     </button>
 </div>
+
+<script src="../public/js/"></script>
