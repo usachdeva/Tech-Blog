@@ -1,0 +1,21 @@
+<!-- Loop over the blogs to display each blog -->
+{{#each blogs as |blog|}}
+    <div class="row mb-4 blog">
+        <a href="/blogs/{{blog.id}}">
+            <div class="col-md-5">
+                <h2>
+                    {{blog.title}}
+                </h2>
+                -Posted by
+                {{blog.user_id}}
+                on
+                {{blog.date_created}}
+            </div>
+            <div class="col-md-7">
+                <p>
+                    {{blog.content}}
+                </p>
+            </div>
+        </a>
+    </div>
+{{/each}}
