@@ -38,7 +38,7 @@ router.get("/blogs/:id", async (req, res) => {
             ],
         });
 
-        const blog = userName.get({ plain: true });
+        const blog = blogData.get({ plain: true });
 
         res.render("blog", {
             ...blog,

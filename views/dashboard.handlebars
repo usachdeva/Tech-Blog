@@ -12,9 +12,8 @@
             <div class="row mb-2">
                 <div class="col-md-8">
                     <h2><a href="/blog/{{blog.id}}">{{blog.title}}
-                            <br />
-                            {{blog.user_id}}</a></h2>
-                    <h4>{{blog.content}}</h4>
+                            on
+                            {{blog.date_created}}</a></h2>
                 </div>
             </div>
         {{/each}}
@@ -22,9 +21,9 @@
 {{/if}}
 
 <div>
-    <button id="new-blog">
-        Enter New Blog
-    </button>
+    <a href="/new-blog">
+        <button id="new-blog">
+            Enter New Blog
+        </button>
+    </a>
 </div>
-
-<script src="../public/js/dashboard.js"></script>

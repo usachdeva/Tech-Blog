@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome, {{userName}}!</h2>
+        <h3>Your Dashboard</h3>
+        <h3>What's new today!</h3>
+    </div>
+</div>
+
+{{! enter the data for the new blog }}
+<div class="col-md-6">
+    <form class="form new-blog-form">
+        <div class="form-group">
+            <label for="blog-title">Title:</label>
+            <input class="form-input" type="text" id="blog-title" />
+        </div>
+        <div class="form-group">
+            <label for="blog-content">Content:</label>
+            <input class="form-input" type="text" id="blog-content" />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Create</button>
+        </div>
+    </form>
+</div>
+
+<script src="../public/js/newBlog.js"></script>
