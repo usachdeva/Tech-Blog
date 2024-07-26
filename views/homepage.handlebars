@@ -4,12 +4,13 @@
         <a href="/blogs/{{blog.id}}">
             <div class="col-md-5">
                 <h2>
-                    {{blog.title}}
+                    <span>{{blog.title}}</span>
+                    <span>-Posted by
+                        {{blog.user_id}}
+                        on
+                        {{blog.date_created}}
+                    </span>
                 </h2>
-                -Posted by
-                {{blog.user_id}}
-                on
-                {{blog.date_created}}
             </div>
             <div class="col-md-7">
                 <p>
