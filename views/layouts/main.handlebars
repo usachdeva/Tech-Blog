@@ -3,22 +3,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tech-Blogs</title>
-        <link rel="stylesheet" href="../../public/css/jass.css" />
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
-        <div class="flex-column justify-space-around">
             <header class="display-flex justify-space-between align-center p-2">
                 <h1>
                     <a href="/">HOME</a>
                     <a href="/dashboard">DASHBOARD</a>
                     <!-- Conditionally render login or logout links -->
+                    <span class="text-end">
                     {{#if logged_in}}
                         <button class="no-button" id="logout">LOGOUT</button>
                     {{else}}
                         <a href="/login">LOGIN</a>
                     {{/if}}
+                    </span>
                 </h1>
-                </div><div>
+                <div>
                 <h2>
                     TECH-BLOGS
                 </h2>
