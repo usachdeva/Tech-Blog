@@ -5,22 +5,42 @@ html {
 body {
     margin: 0;
 }
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 1em;
+    background-color: cadetblue;
+}
+.login {
+    margin: 2em;
+    font-weight: bolder;
+}
 main {
     display: block;
 }
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
+h3 {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: red;
 }
 a {
-    background-color: transparent;
     text-decoration: none;
+    color: black;
+}
+hr {
+    margin: 0;
+}
+.blog {
+    border: 1px solid black;
+    margin: 2px;
+    text-align: center;
+}
+.blog-title {
+    color: #337dff;
 }

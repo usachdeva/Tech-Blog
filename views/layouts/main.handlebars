@@ -1,41 +1,47 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tech-Blogs</title>
-        <link rel="stylesheet" href="/css/style.css" />
-    </head>
-    <body>
-            <header class="display-flex justify-space-between align-center p-2">
-                <h1>
-                    <a href="/">HOME</a>
-                    <a href="/dashboard">DASHBOARD</a>
-                    <!-- Conditionally render login or logout links -->
-                    <span class="text-end">
-                    {{#if logged_in}}
-                        <button class="no-button" id="logout">LOGOUT</button>
-                    {{else}}
-                        <a href="/login">LOGIN</a>
-                    {{/if}}
-                    </span>
-                </h1>
-                <div>
-                <h2>
-                    TECH-BLOGS
-                </h2>
-            </header>
-            <main class="container container-fluid mt-5">
-                <!-- Render the sub layout -->
-                {{{body}}}
-            </main>
-            <footer>
 
-            </footer>
-        </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech-Blogs</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
 
-        <!-- Render script for logged in users only -->
-        {{#if logged_in}}
-            <script src="../../public/js/logout.js"></script>
-        {{/if}}
-    </body>
+<body>
+    <header>
+        <div class="navbar">
+            <h2>
+                <a href="/">HOME</a>
+                <a href="/dashboard">DASHBOARD</a>
+            </h2>
+            <!-- Conditionally render login or logout links -->
+            <span class="login">
+                {{#if logged_in}}
+                <button class="no-button" id="logout">LOGOUT</button>
+                {{else}}
+                <a href="/login">LOGIN</a>
+                {{/if}}
+            </span>
+    </header>
+
+    <hr>
+
+    <h3>
+        TECH-BLOGS
+    </h3>
+    <main class="d-flex justify-content-center">
+        <!-- Render the sub layout -->
+        {{{body}}}
+    </main>
+    <footer>
+
+    </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="../../public/js/logout.js"></script>
+    {{/if}}
+</body>
+
 </html>
