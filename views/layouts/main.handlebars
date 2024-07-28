@@ -12,7 +12,7 @@
         <div class="navbar">
             <h2>
                 <a href="/">HOME</a>
-                <a href="../dashboard">DASHBOARD</a>
+                <a href="/dashboard">DASHBOARD</a>
             </h2>
             <!-- Conditionally render login or logout links -->
             <span class="login">
@@ -40,7 +40,7 @@
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
-    <script src="../../public/js/logout.js"></script>
+    <script src="./js/logout.js"></script>
     {{/if}}
 </body>
 

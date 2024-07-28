@@ -35,15 +35,17 @@ router.get("/dashboard", withAuth, async (req, res) => {
             where: {
                 user_id: req.session.user_id,
             },
-            include: [{ model: User, attributes: ["username"] }],
+            include: [{ model: User, attributes: ["userName"] }],
         });
+
+        console.log("Welcome to dashboard");
 
         // Serialize data so the template can read it
         const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
         res.render("dashboard", {
             blogs,
-            logged_in: true,
+            logged_in: req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json(err);
@@ -53,7 +55,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
 router.get("/login", (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-        res.redirect("/dashboard");
+        res.redirect("dashboard");
         return;
     }
 
