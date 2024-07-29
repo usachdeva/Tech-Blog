@@ -62,4 +62,19 @@ router.get("/login", (req, res) => {
     res.render("login");
 });
 
+// add data for new user
+router.get("/signup", (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect("dashboard");
+        return;
+    }
+
+    res.render("signup");
+});
+
+// to add a new blog
+router.get("/newBlog", (req, res) => {
+    res.render("newBlog");
+});
+
 module.exports = router;
