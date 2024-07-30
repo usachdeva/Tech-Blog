@@ -73,8 +73,31 @@ router.get("/signup", (req, res) => {
 });
 
 // to add a new blog
-router.get("/newBlog", (req, res) => {
-    res.render("newBlog");
+router.get("/newBlog", withAuth, (req, res) => {
+    res.render("newblog", {
+        logged_in: req.session.logged_in,
+    });
+});
+
+// to get to the blog page
+router.get("/blog/:id", withAuth, async (req, res) => {
+    try {
+        const blogData = await Blog.findByPk(req.params.id, {
+            where: {
+                user_id: req.session.user_id,
+            },
+            include: [{ model: User, attributes: ["userName"] }],
+        });
+
+        const blog = blogData.get({ plain: true });
+
+        res.render("blog", {
+            blog,
+            logged_in: req.session.logged_in,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 module.exports = router;

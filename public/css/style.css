@@ -2,9 +2,11 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
+
 body {
     margin: 0;
 }
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -12,16 +14,20 @@ body {
     padding-right: 1em;
     background-color: cadetblue;
 }
+
 .login {
     margin: 2em;
     font-weight: bolder;
 }
+
 main {
     display: block;
 }
+
 h2 {
     font-size: 2em;
 }
+
 h3 {
     font-size: 1.5em;
     display: flex;
@@ -29,18 +35,65 @@ h3 {
     justify-content: center;
     color: red;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 hr {
     margin: 0;
 }
+
 .blog {
     border: 1px solid black;
     margin: 2px;
     text-align: center;
 }
+
+.blog-header {
+    background-color: greenyellow;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    width: 100%;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical alignment */
+    padding: 0.5em; /* Add some padding for better spacing */
+}
+
 .blog-title {
-    color: #337dff;
+    flex: 1;
+    text-align: left; /* Ensure title aligns to the left */
+}
+
+.blog-creator {
+    flex: none;
+    text-align: right; /* Ensure creator aligns to the right */
+}
+
+.form-group {
+    margin: 5px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+}
+
+.new-blog-form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3px;
+}
+
+a:hover,
+a:link:hover {
+    cursor: pointer;
 }

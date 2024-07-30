@@ -1,47 +1,50 @@
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech-Blogs</title>
-    <link rel="stylesheet" href="/css/style.css" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tech-Blogs</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
 
-<body>
-    <header>
-        <div class="navbar">
-            <h2>
-                <a href="/">HOME</a>
-                <a href="/dashboard">DASHBOARD</a>
-            </h2>
-            <!-- Conditionally render login or logout links -->
-            <span class="login">
-                {{#if logged_in}}
-                <button class="no-button" id="logout">LOGOUT</button>
-                {{else}}
-                <a href="/login">LOGIN</a>
-                {{/if}}
-            </span>
-    </header>
+    <body>
+        <header>
+            <div class="navbar">
+                <h2>
+                    <a href="/">HOME</a>
+                    <a href="/dashboard">DASHBOARD</a>
+                </h2>
+                <!-- Conditionally render login or logout links -->
+                <span class="login">
+                    {{#if logged_in}}
+                        <button class="no-button" id="logout">LOGOUT</button>
+                    {{else}}
+                        <a href="/login"><button
+                                class="no-button"
+                                id="logout"
+                            >LOGIN</button></a>
+                    {{/if}}
+                </span>
+            </div>
+        </header>
 
-    <hr>
+        <hr />
 
-    <h3>
-        TECH-BLOGS
-    </h3>
-    <main class="d-flex justify-content-center">
-        <!-- Render the sub layout -->
-        {{{body}}}
-    </main>
-    <footer>
+        <h3>
+            TECH-BLOGS
+        </h3>
+        <main class="d-flex justify-content-center">
+            <!-- Render the sub layout -->
+            {{{body}}}
+        </main>
+        <footer>
 
-    </footer>
-    </div>
+        </footer>
 
-    <!-- Render script for logged in users only -->
-    {{#if logged_in}}
-    <script src="./js/logout.js"></script>
-    {{/if}}
-</body>
+        <!-- Render script for logged in users only -->
+        {{#if logged_in}}
+            <script src="./js/logout.js"></script>
+        {{/if}}
+    </body>
 
 </html>

@@ -23,7 +23,7 @@ router.get("/:blogId", async (req, res) => {
 });
 
 // to add new Blog
-router.post("/newBlog", async (req, res) => {
+router.post("/", async (req, res) => {
     try {
         const newBlog = await Blog.create({
             ...req.body,

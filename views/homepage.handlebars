@@ -1,22 +1,24 @@
 <!-- Loop over the blogs to display each blog -->
 {{#each blogs as |blog|}}
-    <div class="row mb-4 blog">
-        <a href="/blogs/{{blog.id}}">
+<div class="row blog">
+    <div class="blog-header">
+        <a href="/blog/{{blog.id}}">
             <div class="blog-title col-md-5">
-                <h4>
-                    <span>{{blog.title}}</span>
-                    <span>-Posted by
+                <h4 class="title-container">
+                    <span class="blog-title">{{blog.title}}</span>
+                    <span class="blog-creator">Posted by
                         {{blog.user.userName}}
                         on
                         {{format_date blog.date_created}}
                     </span>
                 </h4>
             </div>
-            <div class="col-md-7">
-                <p>
-                    {{blog.content}}
-                </p>
-            </div>
-        </a>
     </div>
+    <div class="col-md-7 blog-container">
+        <p>
+            {{blog.content}}
+        </p>
+    </div>
+    </a>
+</div>
 {{/each}}

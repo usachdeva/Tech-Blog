@@ -6,18 +6,31 @@
 </div>
 
 {{#if blogs.length}}
-    <div class="col-md-6 project-list">
-
-        {{#each blogs as |blog|}}
-            <div class="row mb-2">
-                <div class="col-md-8">
-                    <h2><a href="/blog/{{blog.id}}">{{blog.title}}
+<div class="col-md-6 project-list">
+    {{#each blogs as |blog|}}
+    <div class="row blog">
+        <div class="blog-header">
+            <a href="/blog/{{blog.id}}">
+                <div class="blog-title col-md-5">
+                    <h4 class="title-container">
+                        <span class="blog-title-content">{{blog.title}}</span>
+                        <span class="blog-creator">Posted by
+                            {{blog.user.userName}}
                             on
-                            {{blog.date_created}}</a></h2>
+                            {{format_date blog.date_created}}
+                        </span>
+                    </h4>
                 </div>
-            </div>
-        {{/each}}
+        </div>
+        <div class="col-md-7 blog-container">
+            <p>
+                {{blog.content}}
+            </p>
+        </div>
+        </a>
     </div>
+    {{/each}}
+</div>
 {{/if}}
 
 <div>
