@@ -55,6 +55,7 @@ repo : https://github.com/usachdeva/Tech-Blog
 ## Walkthrough Video
 
 ```
+https://www.youtube.com/watch?v=hJchcrlXZw8
 ```
 
 ---
